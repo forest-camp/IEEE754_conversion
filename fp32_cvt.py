@@ -66,4 +66,9 @@ def convert(x):
 
 
 if __name__ == "__main__":
-    convert(sys.argv[1])
+    if sys.argv[1][:2] == "0x":
+        convert(int(sys.argv[1], 16))
+    elif sys.argv[1][:2] == "0b":
+        convert(int(sys.argv[1], 2))
+    else:
+        print("Not supported type!")
