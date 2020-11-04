@@ -1,4 +1,5 @@
 import sys
+import binascii
 
 
 def print_sign(x):
@@ -43,14 +44,14 @@ def convert(x):
     exp_f, exp_i = convert_exp_to_int(exp)
     man_f, man_i = convert_man_to_float(man, is_denorm)
 
-    print(" " * 30, "SIGN".center(5), "\t", "EXP".center(15), "\t", "MAN".center(25))
-    print("Value :".ljust(30), print_sign(sign).center(5), "\t", str(exp_f).center(15), "\t", str(man_f).center(25))
-    print("Encoded as :".ljust(30), print_sign(sign).center(5), "\t", str(exp_i).center(15), "\t", str(man_i).center(25))
-    print("Binary :".ljust(30), print_sign(sign).center(5), "\t", exp.replace('', ' ').center(15), "\t", man.replace('', ' ').center(25))
+    print(" " * 31, "SIGN".center(5), "\t", "EXP".center(15), "\t", "MAN".center(25))
+    print("Value".ljust(30), ":", print_sign(sign).center(5), "\t", str(exp_f).center(15), "\t", str(man_f).center(25))
+    print("Encoded as".ljust(30), ":", print_sign(sign).center(5), "\t", str(exp_i).center(15), "\t", str(man_i).center(25))
+    print("Binary".ljust(30), ":", print_sign(sign).center(5), "\t", exp.replace('', ' ').center(15), "\t", man.replace('', ' ').center(25))
     res = (-1 ** int(sign)) * man_f * (2 ** exp_f)
-    print("Decimal representation:".ljust(30), str(res))
-    print("Binary Representation:".ljust(30), str(bin(x)[:2] + bin(x)[3:]))
-    print("Hexadecimal Representation:".ljust(30), str(hex(x)[:2] + hex(x)[3:]))
+    print("Decimal representation".ljust(30), ":", str(res))
+    print("Binary Representation".ljust(30), ":", str(bin(x)[:2] + bin(x)[3:]))
+    print("Hexadecimal Representation".ljust(30), ":", str(hex(x)[:2] + hex(x)[3:]))
     if is_denorm:
         print('*' * 80)
         print('DENORM!'.center(80))
@@ -66,7 +67,7 @@ def convert(x):
 
 
 if __name__ == "__main__":
-        if sys.argv[1][:2] == "0x":
+    if sys.argv[1][:2] == "0x":
         convert(int(sys.argv[1], 16))
     elif sys.argv[1][:2] == "0b":
         convert(int(sys.argv[1], 2))
