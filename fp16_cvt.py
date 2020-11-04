@@ -1,5 +1,4 @@
 import sys
-import binascii
 
 
 def print_sign(x):
