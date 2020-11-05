@@ -16,7 +16,7 @@ you will get:
 Value :                          0              0                       1.9990234375
 Encoded as :                     0              15                          1023
 Binary :                         0          0 1 1 1 1               1 1 1 1 1 1 1 1 1 1
-Decimal representation:        -1.9990234375
+Decimal representation:        1.9990234375
 Binary Representation:         0b0011111111111111
 Hexadecimal Representation:    0x3fff
 
@@ -31,7 +31,7 @@ you will get:
 Value :                          0               128                             1.9999998807907104
 Encoded as :                     0               255                                  8388607
 Binary :                         0         1 1 1 1 1 1 1 1         1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-Decimal representation:        -6.805646932770577e+38
+Decimal representation:        6.805646932770577e+38
 Binary Representation:         0b01111111111111111111111111111111
 Hexadecimal Representation:    0x7fffffff
 **************************************************************************************************************
