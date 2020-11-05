@@ -47,7 +47,7 @@ def convert(x):
     print("Value".ljust(30), ":", print_sign(sign).center(5), "\t", str(exp_f).center(20), "\t", str(man_f).center(50))
     print("Encoded as".ljust(30), ":", print_sign(sign).center(5), "\t", str(exp_i).center(20), "\t", str(man_i).center(50))
     print("Binary".ljust(30), ":", print_sign(sign).center(5), "\t", exp.replace('', ' ').center(20), "\t", man.replace('', ' ').center(50))
-    res = (-1 ** int(sign)) * man_f * (2 ** exp_f)
+    res = ((-1) ** int(sign)) * man_f * (2 ** exp_f)
     print("Decimal representation".ljust(30), ":", str(res))
     print("Binary Representation".ljust(30), ":", str(bin(x)[:2] + bin(x)[3:]))
     print("Hexadecimal Representation".ljust(30), ":", str(hex(x)[:2] + hex(x)[3:]))
